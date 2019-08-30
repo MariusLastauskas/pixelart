@@ -5,27 +5,27 @@
         <link rel="stylesheet" href="src/style/main.css">
     </head>
     <body>
-        <header>
+        <header id="header">
             <div class="header">
                 <nav class="nav">
-                    <ul class="nav__menu">
+                    <ul class="nav__menu" v-bind:class="{ nav__menu_closed: isMobileMenuClosed }">
                         <li class="nav__menu-item nav__menu-item_focus">About us</li>
-                        <li class="nav__menu-item nav__menu-item_submenu_active">
-                            Portfolio
-                            <ul class="dropdown">
-                                <li class="dropdown__item">Creative web design</li>
-                                <li class="dropdown__item">Mobile applications</li>
-                                <li class="dropdown__item">Print design</li>
-                                <li class="dropdown__item">Branding solutions</li>
-                                <li class="dropdown__item">Miscellaneous</li>
-                            </ul>
+                        <li class="nav__menu-item nav__menu-item_submenu">Portfolio
+                            <div class="dropdown">
+                                <ul class="dropdown__body">
+                                    <li class="dropdown__item">Creative web design</li>
+                                    <li class="dropdown__item">Mobile applications</li>
+                                    <li class="dropdown__item">Print design</li>
+                                    <li class="dropdown__item">Branding solutions</li>
+                                    <li class="dropdown__item">Miscellaneous</li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav__menu-item nav__menu-item_disabled">Contact Us</li>
-                        <li class="nav__menu-item nav__menu-item_submenu_disabled nav__menu-item_disabled">Galley</li>
+                        <li class="nav__menu-item nav__menu-item_submenu nav__menu-item_disabled">Galley</li>
                     </ul>
-                    <button class="nav__button">
-                        Get in touch
-                    </button>
+                    <button class="nav__button">Get in touch</button>
+                    <img class="nav__mobile-menu" src="/pixelart/src/img/hamburger-button.svg" v-on:click="openMenu">
                 </nav>
                 <div class="logo">
                     <span class="logo__text logo__text_weight_bold">PIXEL</span>
@@ -33,12 +33,6 @@
                 </div>
             </div>
         </header>
-
-
-
-        <div id="pixelart-app">
-
-        </div>
         <script src="src/main.js"></script>
     </body>
 </html>

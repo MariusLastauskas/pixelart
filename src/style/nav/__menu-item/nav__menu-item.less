@@ -3,7 +3,33 @@
     display: inline-block;
     font-size: 16px;
     line-height: 23px;
+    margin: 0 -2px;
     padding: 28px 0 30px;
     text-align: center;
     width: 117px;
+}
+
+.nav__menu-item:not(.nav__menu-item_disabled) {
+    cursor: pointer;
+}
+
+.nav__menu-item:not(.nav__menu-item_focus):hover {
+    .animation(menu-focus 0.2s linear);
+    
+    background-color: @color_theme_focus;
+}
+
+@media only screen and (max-width: @size_m) {
+    .nav__menu-item {
+        border-top: 1px solid @color_text_underline;
+        display: block;
+        padding: 5px 10px;
+        text-align: left;
+        width: auto;
+    }
+
+    .nav__menu-item:first-child {
+        border-top: none;
+        margin-top: 10px;
+    }
 }

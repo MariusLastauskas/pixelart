@@ -1,3 +1,9 @@
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
 .border-radius(@radius) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
@@ -11,8 +17,26 @@
 }
 
 .button-width(@width) {
+    cursor: pointer;
     font-family: @font_theme;
     height: 40px;
-    padding: 8px auto;
     width: @width;
+}
+
+.submenu-icon-url(@icon) {
+    content: url(@icon);
+    display: inline-block;
+    height: 4px;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+}
+
+.dropdown-box-shadow() {
+    box-shadow: 0 10px 25px -10px rgba(85, 85, 85, 0.5), 0 1px 0 rgba(223, 223, 223, 0.5);
+}
+
+.keyframes(@name, @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
 }

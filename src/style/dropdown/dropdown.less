@@ -1,17 +1,14 @@
 .dropdown {
-    .border-radius(2px);
-    
-    background: @color_solid_white;
     display: none;
     margin: 0 0 0 -32px;
-    padding: 5px 10px;
     position: absolute;
-    top: 90px;
-    width: 160px;
+    top: 80px;
+    width: 180px;
 }
 
-.dropdown:before {
-    content: url('/pixelart/src/img/Triangle_dropdown.svg');
-    display: block;
-    margin: -12px 0 0 0;
+@media only screen and (max-width: @size_m) {
+    .dropdown {
+        margin: 0 0 0 -18px;
+        top: 66px;
+    }
 }

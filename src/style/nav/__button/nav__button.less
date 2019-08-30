@@ -7,3 +7,18 @@
     font-size: 13px;
     margin: 19px 25px 0 0;
 }
+
+.nav__button:hover {
+    .animation(button-focus 0.15s linear);
+    
+    background-color: @color_solid_white;
+    color: @color_theme_purple;
+}
+
+@media only screen and (max-width: @size_xs) {
+    .nav__button {
+        font-size: 11px;
+        margin-right: 16px;
+        width: 80px;
+    }
+}

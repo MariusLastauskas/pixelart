@@ -1,6 +1,11 @@
 var app = new Vue({
-    el: '#pixelart-app',
+    el: '#header',
     data: {
-        message: 'Hello world!'
+        isMobileMenuClosed: true
+    },
+    methods: {
+        openMenu: function() {
+            this.isMobileMenuClosed = !this.isMobileMenuClosed;
+        }
     }
 })
