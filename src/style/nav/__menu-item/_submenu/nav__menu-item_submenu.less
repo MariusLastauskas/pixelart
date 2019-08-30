@@ -1,0 +1,26 @@
+.nav__menu-item_submenu:not(.nav__menu-item_disabled):after {
+    .submenu-icon-url('/pixelart/src/img/Triangle_active.svg');
+}
+
+.nav__menu-item_submenu.nav__menu-item_disabled:after {
+    .submenu-icon-url('/pixelart/src/img/Triangle_disabled.svg');
+}
+
+.nav__menu-item_submenu:hover .dropdown {
+    .animation(drop-in_desktop 0.15s linear);
+
+    display: block;
+}
+
+@media only screen and (max-width: @size_m) {
+    .nav__menu-item_submenu:after {
+        float: right;
+        padding: 9px;
+    }
+
+    .nav__menu-item_submenu:hover .dropdown {
+        .animation(drop-in_mobile 0.15s linear);
+    
+        display: block;
+    }
+}
