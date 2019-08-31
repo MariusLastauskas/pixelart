@@ -9,7 +9,9 @@
 }
 
 .nav__button:hover {
-    .animation(button-focus 0.15s linear);
+    .button-focus-animation(header-button-focus, 
+        @color_theme_purple, @color_solid_white, 
+        @color_solid_white, @color_theme_purple);
     
     background-color: @color_solid_white;
     color: @color_theme_purple;

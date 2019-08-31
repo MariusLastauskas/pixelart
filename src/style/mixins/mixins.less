@@ -4,6 +4,10 @@
 	animation: @arguments;
 }
 
+.background-gradient() {
+    background-image: linear-gradient(to right, #da00c5 0%, #450ab5 100%);
+}
+
 .border-radius(@radius) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
@@ -14,6 +18,21 @@
     .border-radius(4px);
 
     border: 1px solid @color ;
+}
+
+.button-focus-animation(@name, @background-from, @background-to, @text-from, @text-to) {
+    .animation(@name 0.15s linear);
+
+    .keyframes(@name, {
+        0% {
+            background-color: @background-from;
+            color: @text-from;
+        }
+        100% {
+            background-color: @background-to;
+            color: @text-to;
+        }
+    });
 }
 
 .button-width(@width) {
