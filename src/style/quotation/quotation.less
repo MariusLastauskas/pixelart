@@ -1,0 +1,19 @@
+.quotation {
+    .border-radius(4px 4px 4px 0);
+
+    background-color: @color_theme_background_secondary;
+    margin: 20px 0 0 -40px;
+    padding: 15px 20px 39px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.quotation:before {
+    background: linear-gradient(to bottom left, @color_theme_background_shadow 50%, transparent 50%);
+    bottom: -10px;
+    content: '';
+    height: 10px;
+    left: 0;
+    position: absolute;
+    width: 19px;
+}
