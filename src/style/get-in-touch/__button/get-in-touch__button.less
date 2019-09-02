@@ -1,0 +1,31 @@
+.get-in-touch__button {
+    .border-radius(6px);
+
+    background-color: @color_theme_purple;
+    border: 1px solid @color_solid_white;
+    color: @color_solid_white;
+    cursor: pointer;
+    float: right;
+    font-family: @font_theme;
+    font-size: 16px;
+    height: 50px;
+    width: 180px;
+}
+
+.get-in-touch__button:hover {
+    .button-focus-animation(submit_button_focus, 
+    @color_theme_purple, @color_solid_white, 
+    @color_solid_white, @color_theme_purple);
+
+    background-color: @color_solid_white;
+    border: 1px solid @color_theme_purple;
+    color: @color_theme_purple;
+}
+
+@media only screen and (max-width: @size_m) {
+    .get-in-touch__button {
+        display: block;
+        float: unset;
+        width: 100%;
+    }
+}
