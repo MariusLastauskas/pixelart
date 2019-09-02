@@ -1,5 +1,14 @@
 .main-content {
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: 1120px;
     padding: 40px 24px 0 24px;
+}
+
+@media only screen and (max-width: @size_m) {
+    .main-content {
+        display: block;
+        justify-content: unset;
+    }
 }

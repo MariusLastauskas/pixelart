@@ -1,0 +1,18 @@
+.login__submit {
+    .button-border-color(@color_solid_white);
+    .button-width(100%);
+
+    background-color: @color_theme_purple;
+    color: @color_solid_white;
+    margin: 40px 0 0 0;
+}
+
+.login__submit:hover {
+    .button-focus-animation(submit_button_focus, 
+    @color_theme_purple, @color_solid_white, 
+    @color_solid_white, @color_theme_purple);
+
+    background-color: @color_solid_white;
+    border: 1px solid @color_theme_purple;
+    color: @color_theme_purple;
+}
