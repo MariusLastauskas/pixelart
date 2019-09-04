@@ -4,14 +4,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="libs/vue.js"></script>
         <link rel="stylesheet" href="src/style/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
+
     </head>
     <body>
         <header id="header">
             <div class="header">
                 <nav class="nav">
                     <ul class="nav__menu" v-bind:class="{ nav__menu_closed: isMobileMenuClosed }">
-                        <li class="nav__menu-item nav__menu-item_focus">About us</li>
-                        <li class="nav__menu-item nav__menu-item_submenu">Portfolio
+                        <li class="nav__menu-item nav__menu-item_focus">
+                            <span class="nav__menu-text">About us</span>
+                        </li>
+                        <li class="nav__menu-item nav__menu-item_submenu">
+                            <span class="nav__menu-text">Portfolio</span>
                             <div class="dropdown">
                                 <ul class="dropdown__body">
                                     <li class="dropdown__item">Creative web design</li>
@@ -22,11 +27,15 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav__menu-item nav__menu-item_disabled">Contact Us</li>
-                        <li class="nav__menu-item nav__menu-item_submenu nav__menu-item_disabled">Galley</li>
+                        <li class="nav__menu-item nav__menu-item_disabled">
+                            <span class="nav__menu-text">Contact Us</span>
+                        </li>
+                        <li class="nav__menu-item nav__menu-item_submenu nav__menu-item_disabled">
+                            <span class="nav__menu-text">Gallery</span>
+                        </li>
                     </ul>
                     <button class="nav__button">Get in touch</button>
-                    <img class="nav__mobile-menu" src="/pixelart/src/img/hamburger-button.svg" v-on:click="openMenu">
+                    <img class="nav__mobile-menu" src="./src/img/hamburger-button.svg" v-on:click="openMenu">
                 </nav>
                 <div class="logo logo_theme_default">
                     <span class="logo__text logo__text_weight_bold">PIXEL</span>
