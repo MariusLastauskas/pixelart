@@ -2,13 +2,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="libs/vue.js"></script>
-        <link rel="stylesheet" href="src/style/main.css">
+        <script src="./libs/vue.js"></script>
+        <link rel="stylesheet" href="./src/style/main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&display=swap" rel="stylesheet">
-
+        <script src="./libs/sanitize-html.min.js"></script>
     </head>
     <body>
-        <header id="header">
+        <header id="header__controller">
             <div class="header">
                 <nav class="nav">
                     <ul class="nav__menu" v-bind:class="{ nav__menu_closed: isMobileMenuClosed }">
@@ -126,20 +126,25 @@
                         Intrinsicly synergize transparent.
                     </p>
                 </article>
-                <aside class="container container_login">
-                    <form class="login">
+                <aside class="container container_login" id="login__controller">
+                    <form class="login" @submit="validateLogin">
                         <h1 class="login__title">Client zone</h1>
                         <div class="login__input-field">
                             <label class="login__label login__label_bolded" for="login__input_email">Email</label>
-                            <input class="login__input" type="email" id="login__input_email" placeholder="your@email.here">
+                            <input class="login__input" id="login__input_email" v-model="loginEmail" 
+                            v-bind:class="{ login__input_error: emailErr }" type="email" placeholder="your@email.here">
+                            <span class="login__error" id="email__error" v-if="emailErr" v-cloak>{{ emailErr }}</span>
                         </div>
                         <div class="login__input-field">
                             <label class="login__label login__label_bolded" for="login__input_password">Password</label>
-                            <input class="login__input" type="password" id="login__input_password" placeholder="********">
+                            <input class="login__input" id="login__input_password" v-model="loginPassword" 
+                            v-bind:class="{ login__input_error: passwordErr }" type="password" placeholder="********">
+                            <span class="login__error" id="password__error" v-if="passwordErr" v-cloak>{{ passwordErr }}</span>
                         </div>
                         <div class="login__input-field">
                             <label class="login__label login__label_checkbox" for="login__input_remember">
-                                <input class="login__input_checkbox" type="checkbox" id="login__input_remember">
+                                <input class="login__input_checkbox" type="checkbox" id="login__input_remember" 
+                                v-model="loginRememberMe">
                                 <div class="login__checkmark"></div>
                                 <span class="login__checkbox-text">Remember me</span>
                             </label>
@@ -192,9 +197,11 @@
                             <li class="summary__list-item summary__list-item_margin_close">NY</li>
                             <li class="summary__list-item summary__list-item_margin_close">10022</li>
                             <li class="summary__list-item summary__list-item_margin_close">
-                                <a class="summary__phone" href="tel:917-369-8748">917-369-8748</a>
+                                <a class="summary__link" href="tel:917-369-8748">917-369-8748</a>
                             </li>
-                            <li class="summary__list-item summary__list-item_margin_close">hello@pixelart.com</li>
+                            <li class="summary__list-item summary__list-item_margin_close">
+                                <a class="summary__link" href="mailto:hello@pixelart.com">hello@pixelart.com</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -204,6 +211,6 @@
         <footer class="footer">
             <p class="footer__paragraph">Copyright © 2020</p>
         </footer>
-        <script src="src/main.js"></script>
+        <script src="./src/js/prod/main.js"></script>
     </body>
 </html>
