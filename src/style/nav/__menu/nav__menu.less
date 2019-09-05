@@ -6,11 +6,12 @@
 
 @media only screen and (max-width: @size_m) {
     .nav__menu {
+        .animation(drop-in_hamburger 0.15s linear);
         .border-radius(2px);
         .dropdown-box-shadow();
 
         background-color: @color_solid_white;
-        padding: 10px;
+        padding: 0 10px 10px 10px;
         position: absolute;
         right: 10px;
         top: 90px;
@@ -18,9 +19,9 @@
     }
 
     .nav__menu:before {
-        content: url('/pixelart/src/img/Triangle_dropdown.svg');
-        display: block;
-        margin: -17px 20px 0 0;
+        content: url('../img/Triangle_dropdown.svg');
+        display: inline-block;
+        margin: -7px 0 0 130px;
         text-align: right;
     }
 }

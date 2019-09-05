@@ -2,7 +2,6 @@
     .border-radius(4px);
 
     background-color: @color_theme_background_input;
-    border: 1px solid @color_theme_border;
     display: block;
     font-family: @font_theme;
     font-style: italic;
@@ -14,4 +13,8 @@
 
 .login__input:hover {
     box-shadow: 0 0 1px @color_theme_purple;
+}
+
+.login__input:not(.login__input_error) {
+    border: 1px solid @color_theme_border;
 }
