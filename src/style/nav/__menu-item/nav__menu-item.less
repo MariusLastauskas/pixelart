@@ -7,19 +7,19 @@
 }
 
 .nav__menu-item:not(.nav__menu-item_disabled) {
-    color: @color_theme_black;
+    color: @color__theme_black;
     cursor: pointer;
 }
 
 .nav__menu-item:not(.nav__menu-item_focus):hover {
     .animation(menu-focus 0.2s linear);
     
-    background-color: @color_theme_focus;
+    background-color: @color__theme_focus;
 }
 
 @media only screen and (max-width: @size_m) {
     .nav__menu-item {
-        border-top: 1px solid @color_text_underline;
+        border-top: 1px solid @color__text_underline;
         display: block;
         margin: 0;
         padding: 5px 10px;

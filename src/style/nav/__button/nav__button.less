@@ -1,20 +1,20 @@
 .nav__button {
-    .button-border-color(@color_theme_purple);
+    .button-border-color(@color__theme_purple);
     .button-width(130px);
 
-    background-color: @color_theme_purple;
-    color: @color_solid_white;
+    background-color: @color__theme_purple;
+    color: @color__solid_white;
     font-size: 13px;
     margin: 19px 25px 0 0;
 }
 
 .nav__button:hover {
     .button-focus-animation(header-button-focus, 
-        @color_theme_purple, @color_solid_white, 
-        @color_solid_white, @color_theme_purple);
+        @color__theme_purple, @color__solid_white, 
+        @color__solid_white, @color__theme_purple);
     
-    background-color: @color_solid_white;
-    color: @color_theme_purple;
+    background-color: @color__solid_white;
+    color: @color__theme_purple;
 }
 
 @media only screen and (max-width: @size_xs) {
