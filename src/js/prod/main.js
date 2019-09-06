@@ -63,7 +63,7 @@ var loginController = new Vue({
                         window.localStorage.removeItem('credentials');
                     }
 
-                    window.location = 'https://marius-lastauskas.000webhostapp.com/pixel-art/';
+                    window.location = 'http://127.0.0.1:5500/pixelart/?';
                 }
             }
         },
