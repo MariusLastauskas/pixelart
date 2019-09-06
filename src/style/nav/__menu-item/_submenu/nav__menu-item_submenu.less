@@ -1,9 +1,3 @@
-.nav__menu-item_submenu:not(.nav__menu-item_disabled):after {
-    .submenu-icon-url('../img/Triangle_active.svg');
-
-    margin: -4px 0 0 10px;
-}
-
 .nav__menu-item_submenu.nav__menu-item_disabled:after {
     .submenu-icon-url('../img/Triangle_disabled.svg');
 
@@ -16,11 +10,13 @@
     display: block;
 }
 
-@media only screen and (max-width: @size_m) {
-    .nav__menu-item_submenu:not(.nav__menu-item_disabled):after {
-        margin: -12px 0 0 10px;
-    }
-    
+.nav__menu-item_submenu:not(.nav__menu-item_disabled):after {
+    .submenu-icon-url('../img/Triangle_active.svg');
+
+    margin: -4px 0 0 10px;
+}
+
+@media only screen and (max-width: @size_m) {    
     .nav__menu-item_submenu.nav__menu-item_disabled:after {
         margin: -12px 0 0 10px;
     }
@@ -34,5 +30,9 @@
         .animation(drop-in_mobile 0.15s linear);
     
         display: block;
+    }
+
+    .nav__menu-item_submenu:not(.nav__menu-item_disabled):after {
+        margin: -12px 0 0 10px;
     }
 }
