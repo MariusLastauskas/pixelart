@@ -4,7 +4,7 @@
         <title>PIXELART</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./libs/vue.js"></script>
+        <script src="./libs/vue.min.js"></script>
         <link rel="stylesheet" href="./src/style/main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&display=swap" rel="stylesheet">
         <script src="./libs/sanitize-html.min.js"></script>
@@ -13,7 +13,7 @@
         <header id="header__controller">
             <div class="header">
                 <nav class="nav">
-                    <ul class="nav__menu" v-bind:class="{ nav__menu_closed: isMobileMenuClosed }">
+                    <ul class="nav__menu" v-bind:class="{ nav__menu_closed: isMobileMenuClosed }" v-clock>
                         <li class="nav__menu-item nav__menu-item_focus">
                             <span class="nav__menu-text">About us</span>
                         </li>
