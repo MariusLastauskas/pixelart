@@ -5,16 +5,16 @@
 }
 
 .background-gradient() {
-    background: @color_gradient_main;
-    background: -ms-linear-gradient(top right, @color_gradient_main 0%, @color_gradient_secondary 100%);
-    background: -moz-linear-gradient(top right, @color_gradient_main 0%, @color_gradient_secondary 100%);
-    background: -o-linear-gradient(top right, @color_gradient_main 0%, @color_gradient_secondary 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0, @color_gradient_main), color-stop(100, @color_gradient_secondary));
-    background: -webkit-linear-gradient(top right, @color_gradient_main 0%, @color_gradient_secondary 100%);
-    background: linear-gradient(top right, @color_gradient_main 0%, @color_gradient_secondary 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color_gradient_main', endColorstr='@color_gradient_secondary', GradientType=1);
+    background: @color__gradient_main;
+    background: -ms-linear-gradient(top right, @color__gradient_main 0%, @color__gradient_secondary 100%);
+    background: -moz-linear-gradient(top right, @color__gradient_main 0%, @color__gradient_secondary 100%);
+    background: -o-linear-gradient(top right, @color__gradient_main 0%, @color__gradient_secondary 100%);
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0, @color__gradient_main), color-stop(100, @color__gradient_secondary));
+    background: -webkit-linear-gradient(top right, @color__gradient_main 0%, @color__gradient_secondary 100%);
+    background: linear-gradient(top right, @color__gradient_main 0%, @color__gradient_secondary 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color__gradient_main', endColorstr='@color__gradient_secondary', GradientType=1);
 
-    background-image: linear-gradient(to right, @color_gradient_main 0%, @color_gradient_secondary 100%);
+    background-image: linear-gradient(to right, @color__gradient_main 0%, @color__gradient_secondary 100%);
 }
 
 .border-radius(@radius) {
@@ -55,8 +55,7 @@
     content: url(@icon);
     display: inline-block;
     height: 3px;
-    margin: 0 0 0 10px;
-    vertical-align: middle;
+    vertical-align: 4px;
 }
 
 .dropdown-box-shadow() {

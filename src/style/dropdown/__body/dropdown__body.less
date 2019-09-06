@@ -2,7 +2,7 @@
     .border-radius(2px);
     .dropdown-box-shadow();
     
-    background-color: @color_solid_white;
+    background-color: @color__solid_white;
     margin: 10px 0 0 0;
     padding: 5px 10px;
 }
@@ -10,5 +10,11 @@
 .dropdown__body:before {
     content: url('../img/Triangle_dropdown.svg');
     display: block;
-    margin: -12px 0 0 0;
+    margin: -21px 0 0 0;
+}
+
+@media only screen and (max-width: @size_m) {
+    .dropdown__body {
+        margin: 12px 2px 0 -2px;
+    }
 }

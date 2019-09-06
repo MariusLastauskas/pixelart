@@ -10,8 +10,8 @@
         .border-radius(2px);
         .dropdown-box-shadow();
 
-        background-color: @color_solid_white;
-        padding: 0 10px 10px 10px;
+        background-color: @color__solid_white;
+        padding: 10px;
         position: absolute;
         right: 10px;
         top: 90px;
@@ -20,8 +20,9 @@
 
     .nav__menu:before {
         content: url('../img/Triangle_dropdown.svg');
-        display: inline-block;
-        margin: -7px 0 0 130px;
+        // display: block;
+        float: right;
+        margin: -26px 16px 0 0;
         text-align: right;
     }
 }

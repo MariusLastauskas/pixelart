@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>PIXELART</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="./libs/vue.js"></script>
@@ -35,7 +37,7 @@
                         </li>
                     </ul>
                     <button class="nav__button">Get in touch</button>
-                    <img class="nav__mobile-menu" src="./src/img/hamburger-button.svg" v-on:click="openMenu">
+                    <img class="nav__mobile-menu" src="./src/img/hamburger-button.svg" v-on:click="openMenu" alt="menu open-close button">
                 </nav>
                 <div class="logo logo_theme_default">
                     <span class="logo__text logo__text_weight_bold">PIXEL</span>
@@ -45,7 +47,7 @@
         </header>
         <main>
             <section class="banner">
-                <p class="banner__vendor">PixelArt Agency</p>
+                <h1 class="banner__vendor">PixelArt Agency</h1>
                 <p class="banner__slogon">We are creative design and development professionals</p>
                 <button class="banner__button banner__button_color_white">Let's talk!</button>
                 <button class="banner__button banner__button_color_transparent">About us</button>
@@ -75,7 +77,7 @@
                     </p>
                 </div>
             </section>
-            <section class="main-content">
+            <div class="main-content">
                 <article class="container container_main-article">
                     <p class="main-article__date">12:50 13 Oct 2020</p>
                     <h1 class="main-article__title">Simplicity is the ultimate sophistication</h1>
@@ -145,7 +147,7 @@
                             <label class="login__label login__label_checkbox" for="login__input_remember">
                                 <input class="login__input_checkbox" type="checkbox" id="login__input_remember" 
                                 v-model="loginRememberMe">
-                                <div class="login__checkmark"></div>
+                                <span class="login__checkmark"></span>
                                 <span class="login__checkbox-text">Remember me</span>
                             </label>
                         </div>
@@ -153,7 +155,7 @@
                         <a class="login__register" href="#">Register</a>
                     </form>
                 </aside>
-            </section>
+            </div>
             <section class="get-in-touch">
                 <div class="get-in-touch__decoration"></div>
                 <div class="get-in-touch__container">
